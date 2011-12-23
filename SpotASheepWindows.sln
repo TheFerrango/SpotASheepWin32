@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpotASheepWindows", "SpotASheepWindows\SpotASheepWindows\SpotASheepWindows.csproj", "{D944E6B8-41AA-4366-A99B-AA412E4AC0F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpotASheepWindowsContent", "SpotASheepWindows\SpotASheepWindowsContent\SpotASheepWindowsContent.contentproj", "{E34C308E-7E3E-476D-8018-F0458CB2463E}"
+EndProject
+Global
+	GlobalSection(MercurialSourceControlSolutionProperties) = preSolution
+		SolutionIsControlled = True
+		SolutionBindings = <Solution Location In Database>
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D944E6B8-41AA-4366-A99B-AA412E4AC0F0}.Debug|x86.ActiveCfg = Debug|x86
+		{D944E6B8-41AA-4366-A99B-AA412E4AC0F0}.Debug|x86.Build.0 = Debug|x86
+		{D944E6B8-41AA-4366-A99B-AA412E4AC0F0}.Release|x86.ActiveCfg = Release|x86
+		{D944E6B8-41AA-4366-A99B-AA412E4AC0F0}.Release|x86.Build.0 = Release|x86
+		{E34C308E-7E3E-476D-8018-F0458CB2463E}.Debug|x86.ActiveCfg = Debug|x86
+		{E34C308E-7E3E-476D-8018-F0458CB2463E}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
