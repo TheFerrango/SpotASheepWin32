@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework;
+using System.Media;
 
 namespace SpotASheepWindows
 {
@@ -23,6 +24,7 @@ namespace SpotASheepWindows
     GraphicsDeviceManager graphics;
     SpriteBatch spriteBatch;
     SpriteFont sf;
+    SoundEffect se;
     LupoCattivo lc;
     Texture2D nuvola, sfondo, boom, heart, lupo, perdente;
     Texture2D[] pecorelle;
@@ -96,6 +98,7 @@ namespace SpotASheepWindows
       pecorelle[2] = Content.Load<Texture2D>("pecora3");
       boom = Content.Load<Texture2D>("Explosion");
       heart = Content.Load<Texture2D>("heart");
+      se = Content.Load<SoundEffect>("Bomb");
       mappaNuvola = new Color[nuvola.Height * nuvola.Width];
       nuvola.GetData(mappaNuvola);
       // TODO: use this.Content to load your game content here
@@ -370,6 +373,7 @@ namespace SpotASheepWindows
       for (int i = 0; i < listaPecorelle.Count; i++)
         if (listaPecorelle[i].Touched)
         {
+          se.Play();
           AddExplosion(listaPecorelle[i].Position, 7, 5, t);
           listaPecorelle.RemoveAt(i);
         }
