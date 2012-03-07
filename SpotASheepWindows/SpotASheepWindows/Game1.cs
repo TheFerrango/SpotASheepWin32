@@ -72,7 +72,7 @@ namespace SpotASheepWindows
     {
       // TODO: Add your initialization logic here
       Menu.InitializeMenu(Content);
-      pecorelle = new Texture2D[3];
+      pecorelle = new Texture2D[5];
       rand = new Random();
       _oldPanel = Mouse.GetState();
 
@@ -96,6 +96,8 @@ namespace SpotASheepWindows
       pecorelle[0] = Content.Load<Texture2D>("pecora1");
       pecorelle[1] = Content.Load<Texture2D>("pecora2");
       pecorelle[2] = Content.Load<Texture2D>("pecora3");
+      pecorelle[3] = Content.Load<Texture2D>("pecora4");
+      pecorelle[4] = Content.Load<Texture2D>("pecora5");
       boom = Content.Load<Texture2D>("Explosion");
       heart = Content.Load<Texture2D>("heart");
       se = Content.Load<SoundEffect>("Bomb");
@@ -138,7 +140,7 @@ namespace SpotASheepWindows
           killaPecora(gameTime);
 
           if (listaPecorelle.Count < 6)
-            listaPecorelle.Add(new NuvolaGen(pecorelle[rand.Next(0, 3)], rand.Next(0, graphics.GraphicsDevice.DisplayMode.Height / 48) * 45, rand.Next(graphics.GraphicsDevice.DisplayMode.Width - 194, graphics.GraphicsDevice.DisplayMode.Width), (float)(rand.NextDouble() * 5) + 1.0f + (float)punti / 100, true));
+            listaPecorelle.Add(new NuvolaGen(pecorelle[rand.Next(0, 5)], rand.Next(0, graphics.GraphicsDevice.DisplayMode.Height / 48) * 45, rand.Next(graphics.GraphicsDevice.DisplayMode.Width - 194, graphics.GraphicsDevice.DisplayMode.Width), (float)(rand.NextDouble() * 5) + 1.0f + (float)punti / 100, true));
 
           if (listaNuvole.Count < 15)
             listaNuvole.Add(new NuvolaGen(nuvola, rand.Next(0, graphics.GraphicsDevice.DisplayMode.Height / 48) * 45, rand.Next(graphics.GraphicsDevice.DisplayMode.Width - 194, graphics.GraphicsDevice.DisplayMode.Width), (float)(rand.NextDouble() * 3) + 1f + (float)punti / 100));

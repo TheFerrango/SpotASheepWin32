@@ -13,7 +13,7 @@ namespace SpotASheepWindows
   {   
     static Texture2D _NewGame, _HighScore, _Title;
     static bool _IsMenuShown;
-
+    static DisplayMode displayMode;
     static Rectangle[] pulsanti = new Rectangle[3];
 
     public static bool IsMenuShown
@@ -23,12 +23,13 @@ namespace SpotASheepWindows
     }
     public static void InitializeMenu(ContentManager Content)
     {
+      displayMode = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode;
       _Title = Content.Load<Texture2D>("Title");
       _NewGame = Content.Load<Texture2D>("NewGame");
       _HighScore = Content.Load<Texture2D>("HighScores");
-      pulsanti[0] = new Rectangle(400 - _Title.Width / 2, 20, 389, 167);
-      pulsanti[1] = new Rectangle(400 - _NewGame.Width / 2, 220, 371, 66);
-      pulsanti[2] = new Rectangle(400 - _HighScore.Width / 2, 320, 371, 66);
+      pulsanti[0] = new Rectangle((displayMode.Width - _Title.Width) / 2, 20, 389, 167);
+      pulsanti[1] = new Rectangle((displayMode.Width - _NewGame.Width) / 2, 220, 371, 66);
+      pulsanti[2] = new Rectangle((displayMode.Width - _HighScore.Width) / 2, 320, 371, 66);
       _IsMenuShown = true;
     }
     
